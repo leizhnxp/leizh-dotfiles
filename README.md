@@ -1,5 +1,5 @@
-dotfiles
+provision
 ========
 
-my home env after 2020
+my home env provision after 2020
 
