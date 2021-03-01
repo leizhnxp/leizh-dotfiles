@@ -3,7 +3,7 @@
 osname=$(uname)
 
 ts=`date "+%Y%m%d%H%M%S"`
-provision_dir=$(dirname $(readlink -f provision/set-up.sh))
+provision_dir=$(dirname $(readlink -f $0))
 echo checking in set up entry $ts , provision location: $provision_dir
 
 mkdir -p ~/opt
@@ -28,10 +28,14 @@ backup_dotfile(){
 }
 
 refresh_dotfile vimrc
-#refresh_dotfile screenrc
+refresh_dotfile screenrc
 #refresh_dotfile gitignore
 
 git config --global core.editor vim
+
+# setup my custom zsh content
+
+[[ -d $ZSH_CUSTOM ]] && ln -sf $provision_dir/dotfiles/myzshrc.zsh $ZSH_CUSTOM/myzshrc.zsh 
 
 # only for bash
 #curl -L https://raw.githubusercontent.com/juven/maven-bash-completion/master/bash_completion.bash -o ~/.maven_bash_completion.bash

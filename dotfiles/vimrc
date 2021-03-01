@@ -30,6 +30,7 @@ Plugin 'udalov/kotlin-vim'
 "Plugin 'fatih/vim-go'
 Plugin 'stephpy/vim-yaml'
 Plugin 'robbles/logstash.vim'
+Plugin 'c.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
