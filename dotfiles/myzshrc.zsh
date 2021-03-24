@@ -1,5 +1,7 @@
 
 export LANG=en_US.UTF-8
+export LESSCHARSET=utf-8
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ref https://gist.github.com/emreberge/1424710, trick bash help in zsh
 function help(){
